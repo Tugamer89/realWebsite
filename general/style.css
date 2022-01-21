@@ -1,0 +1,19 @@
+hT {
+	text-align: center;
+	color: red;
+	font-size: xxx-large;
+	font-family: sans-serif;
+	font-weight: bold;
+}
+
+#rights {
+	position: absolute;
+	bottom: 0px;
+	right: 1.5%;
+}
+
+position {
+	text-align: right;
+	font-size: x-large;
+	font-weight: bold;
+}
