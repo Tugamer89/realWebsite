@@ -13,3 +13,11 @@ In this forum you can see all the projects and the authors, you can vote project
   - Page for creation of new projects
   - Login with cookies
   
+## **Changelog:**
+
+### **Version 1.0.1**
+  - Optimized some code
+  - Cleaned some code
+  - Secured 
+  - Added the cuntion to sort by athor or by project in the scoreboard
+  
