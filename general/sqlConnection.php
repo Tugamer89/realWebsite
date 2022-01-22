@@ -1,8 +1,8 @@
 <?php
-	$dbServerName = "sql11.freemysqlhosting.net";
-	$dbUsername = "sql11467166";
+	$dbServerName = getenv("dbServerName");
+	$dbUsername = getenv("dbUsername");
 	$dbPassword = getenv("dbPassword");
-	$dbName = "sql11467166";
+	$dbName = getenv("dbName");
 
 	$conn = new mysqli($dbServerName, $dbUsername, $dbPassword, $dbName);
 
