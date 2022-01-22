@@ -28,16 +28,67 @@
 	if ($result->num_rows > 0) {
 		$i = 0;
 		while ($row = $result->fetch_assoc()) {
+			$dateofbirth = utf8_encode($row["date"])."-";
+			$year = date("Y");
+			$month = date("m");
+			$day = date("d");
+
+			for ($j = 0; $j < strlen($dateofbirth); $j++) {
+				if ($dateofbirth[$j] != "-") {
+					$date .= $dateofbirth[$j];
+				} else {
+					$dates[] = $date;
+					$date = "";
+				}
+			}
+
+			$age = intval($year) - intval($dates[0]);
+			
+			if (intval($day) < intval($dates[2])) {
+				if (intval($month) < intval($dates[1])) {
+					$age -= 1;
+				}
+			}
+
+			$projectS = utf8_encode($row["projects"]);
+			$projectA = array();
+			$rating = 0;
+			for ($j = 0; $j < strlen($projectS); $j++) {
+				if ($projectS[$j] != "-") {
+					$num .= $projectS[$j];
+
+				} else {
+					$projectA[] = array(
+						"id" => intval($num),
+						"title" => $projects[intval($num)]["title"],
+						"description" => $projects[intval($num)]["description"],
+						"rate" => $projects[intval($num)]["rate"],
+						"image" => $projects[intval($num)]["image"]
+					);
+
+					$rating += $projects[intval($num)]["rate"];
+
+					$num = "";
+				}
+			}
+
+			$rating /= count($projectA);
+			
+
 			$authors[$i++] = array(
 				"id" => utf8_encode($row["id"]),
 				"nickname" => utf8_encode($row["nickname"]),
 				"name" => utf8_encode($row["name"]),
 				"surname" => utf8_encode($row["surname"]),
-				"date" => utf8_encode($row["date"]),
 				"projects" => utf8_encode($row["projects"]),
-				"image" => utf8_encode($row["image"])
+				"image" => utf8_encode($row["image"]),
+				"dateOfBirth" => utf8_encode($row["date"]),
+				"age" => $age,
+				"rating" => $rating,
+				"projectsA" => $projectA
 			);
 		}
+
 	} else {
 		echo "Authors empty!";
 	}

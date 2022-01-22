@@ -9,50 +9,9 @@
 		$surname = $authors[$id]["surname"];
 		$photo = $authors[$id]["image"];
 		$projectS = $authors[$id]["projects"];
-
-		$dateofbirth = $authors[$id]["date"]."-";
-		$year = date("Y");
-		$month = date("m");
-		$day = date("d");
-
-		for ($i = 0; $i < strlen($dateofbirth); $i++) {
-			if ($dateofbirth[$i] != "-") {
-				$date .= $dateofbirth[$i];
-			} else {
-				$dates[] = $date;
-				$date = "";
-			}
-		}
-
-		$age = intval($year) - intval($dates[0]);
-		
-		if (intval($day) < intval($dates[2])) {
-			if (intval($month) < intval($dates[1])) {
-				$age -= 1;
-			}
-		}
-
-
-		for ($i = 0; $i < strlen($projectS); $i++) {
-			if ($projectS[$i] != "-") {
-				$num .= $projectS[$i];
-
-			} else {
-				$projectA[] = array(
-					"id" => intval($num),
-					"title" => $projects[intval($num)]["title"],
-					"description" => $projects[intval($num)]["description"],
-					"rate" => $projects[intval($num)]["rate"],
-					"image" => $projects[intval($num)]["image"]
-				);
-
-				$rating += $projects[intval($num)]["rate"];
-
-				$num = "";
-			}
-		}
-
-		$rating /= count($projectA);
+		$rating = $authors[$id]["rating"];
+		$age = $authors[$id]["age"];
+		$projectA = $authors[$id]["projectsA"];
 
 	} else {
 		$nickname = "";
