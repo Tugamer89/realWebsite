@@ -7,14 +7,34 @@
 		$nickname = $authors[$id]["nickname"];
 		$name = $authors[$id]["name"];
 		$surname = $authors[$id]["surname"];
-		$age = $authors[$id]["date"];
 		$photo = $authors[$id]["image"];
 		$projectS = $authors[$id]["projects"];
 
-		$num = "";
-		$rating = 0;	
+		$dateofbirth = $authors[$id]["date"]."-";
+		$year = date("Y");
+		$month = date("m");
+		$day = date("d");
+
+		for ($i = 0; $i < strlen($dateofbirth); $i++) {
+			if ($dateofbirth[$i] != "-") {
+				$date .= $dateofbirth[$i];
+			} else {
+				$dates[] = $date;
+				$date = "";
+			}
+		}
+
+		$age = intval($year) - intval($dates[0]);
+		
+		if (intval($day) < intval($dates[2])) {
+			if (intval($month) < intval($dates[1])) {
+				$age -= 1;
+			}
+		}
+
+
 		for ($i = 0; $i < strlen($projectS); $i++) {
-			if (substr($projectS, $i, 1) != "-") {
+			if ($projectS[$i] != "-") {
 				$num .= $projectS[$i];
 
 			} else {

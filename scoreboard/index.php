@@ -34,7 +34,7 @@
 								<table>
 									<tr><td><h>Title: '.$projects[$i]["title"].'</h></td></tr>
 									<tr><td><h>Description: '.$projects[$i]["description"].'</h></td></tr>
-									<tr><td><h>Author: <a href="/authors/author.php?id='.strval($projects[$i]["idAuthor"]).'">'.$projects[$i][2].'</a></h></td></tr>
+									<tr><td><h>Author: <a href="/authors/author.php?id='.strval($projects[$i]["idAuthor"]).'">'.$authors[$projects[$i]["idAuthor"]]["nickname"].'</a></h></td></tr>
 									<tr><td><h>Rate: '.strval($projects[$i]["rate"]).'/10</h></td></tr>
 								</table>
 							</td>

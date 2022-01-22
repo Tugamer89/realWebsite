@@ -49,6 +49,6 @@
 			);
 		}
 	} else {
-		echo "Projects empty!";
+		echo "Authors empty!";
 	}
 ?>

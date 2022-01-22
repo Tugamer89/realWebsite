@@ -34,7 +34,7 @@
 							&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
 							<h>Rate this project: </h> 
 							<input type="number" id="rate'.strval($projects[$i]["id"]).'" min="0" max="10"> 
-							<button id="rateButton'.strval($projects[$i]["id"]).'" onclick="">Send vote</button>
+							<button id="rateButton'.strval($projects[$i]["id"]).'" onclick="update('.strval($projects[$i]["id"]).')">Send vote</button>
 							&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
 						</td>
 
@@ -47,7 +47,13 @@
 
 		<script>
 			function redirect(id) {
-				window.location.href=("/projects/project.php?id=" + id);
+				window.location.href = ("/projects/project.php?id=" + id);
+			}
+
+			function update(id) {
+				var vote = document.getElementById("rate"+id).value;
+
+				window.location.href = ("/general/addRate.php?id=" + id + "&vote=" + vote);
 			}
 		</script>
 
