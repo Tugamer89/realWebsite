@@ -19,6 +19,9 @@ In this forum you can see all the projects and the authors, you can vote project
 
 ## **Changelog:**
 
+## **Version 1.0.2**
+	- Secured
+
 ### **Version 1.0.1**
   - Optimized some code
   - Cleaned some code
