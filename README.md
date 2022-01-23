@@ -16,7 +16,7 @@ In this forum you can see all the projects and the authors, you can vote project
   - Login with cookies
   
     
-     
+<br>
 ## **Changelog:**
 
 ### **Version 1.0.1**
