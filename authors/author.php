@@ -82,11 +82,7 @@
 			</table>			
 		</center>
 
-		<script>
-			function redirect(id) {
-				window.location.href=("/projects/project.php?id=" + id);
-			}
-		</script>
+		<script src="/general/scripts.js"></script>
 
 		<h id="rights">Copyright ©2022 All rights reserved | Made by: <a href="https://linktr.ee/tugamer" target="_blank">Tuga</a></h>
 	</body>
