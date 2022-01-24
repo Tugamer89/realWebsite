@@ -27,12 +27,14 @@
 	
 	if ($result->num_rows > 0) {
 		$i = 0;
+		$year = date("Y");
+		$month = date("m");
+		$day = date("d");
+
 		while ($row = $result->fetch_assoc()) {
 			$dateofbirth = utf8_encode($row["date"])."-";
-			$year = date("Y");
-			$month = date("m");
-			$day = date("d");
-
+			$dates = array();
+			
 			for ($j = 0; $j < strlen($dateofbirth); $j++) {
 				if ($dateofbirth[$j] != "-") {
 					$date .= $dateofbirth[$j];
@@ -72,12 +74,15 @@
 				}
 			}
 
-			$rating /= count($projectA);
+			if (count($projectA) != 0) {
+				$rating /= count($projectA);
+			}
 			
 
 			$authors[$i++] = array(
 				"id" => utf8_encode($row["id"]),
 				"nickname" => utf8_encode($row["nickname"]),
+				"password" => utf8_encode($row["password"]),
 				"name" => utf8_encode($row["name"]),
 				"surname" => utf8_encode($row["surname"]),
 				"projects" => utf8_encode($row["projects"]),
@@ -92,4 +97,6 @@
 	} else {
 		echo "Authors empty!";
 	}
+
+	$conn -> close
 ?>

@@ -1,21 +1,18 @@
-<?php
-	include '/home/runner/realWebsite/general/datas.php';
-
-	array_multisort(array_column($projects, "rate"), SORT_DESC, $projects);
-	array_multisort(array_column($authors, "rating"), SORT_DESC, $authors);
-?>
+<?php session_start(); include '/home/runner/realWebsite/general/datas.php';?>
 
 <html>
 	<head>
 		<link rel="stylesheet" href="/general/style.css">
-		<link rel="icon" href="/general/favicon.png">
+		<link rel="icon" href="/images/favicon.png">
 		<title>Tuga's forum - Scoreboard</title>
 	</head>
 
 	<body>
 		<center>
-			<hT>Scoreboard</hT> <br> <br> <br>
-
+			<hT>Scoreboard</hT> 
+			<?php include '/home/runner/realWebsite/general/autoLogin.php';?>
+			<br> <br> <br>
+			
 			<form action="" method="post">
 				<label>Sort by: </label>
 				<select name="sort">
@@ -29,6 +26,9 @@
 			<br> <br> <br>
 
 			<?php
+				array_multisort(array_column($projects, "rate"), SORT_DESC, $projects);
+				array_multisort(array_column($authors, "rating"), SORT_DESC, $authors);
+
 				if (isset($_POST["submit"])) {
 					$sort = $_POST["sort"];
 
@@ -101,11 +101,7 @@
 			?>
 		</center>
 
-		<script>
-			function redirect(id) {
-				window.location.href=("/projects/project.php?id=" + id);
-			}
-		</script>
+		<script src="/general/scripts.js"></script>
 
 		<h id="rights">Copyright ©2022 All rights reserved | Made by: <a href="https://linktr.ee/tugamer" target="_blank">Tuga</a></h>
 	</body>

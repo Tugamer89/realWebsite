@@ -26,7 +26,7 @@
 <html>
 	<head>
 		<link rel="stylesheet" href="/general/style.css">
-		<link rel="icon" href="/general/favicon.png">
+		<link rel="icon" href="/images/favicon.png">
 		<title>Tuga's forum - <?php echo $title ?></title>
 	</head>
 

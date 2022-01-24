@@ -8,7 +8,7 @@ hT {
 
 #rights {
 	position: absolute;
-	bottom: 0px;
+	bottom: 1.5%;
 	right: 1.5%;
 }
 
@@ -16,4 +16,14 @@ position {
 	text-align: right;
 	font-size: x-large;
 	font-weight: bold;
+}
+
+right {
+	text-align: right;
+}
+
+#acc {
+	position: absolute;
+	top: 1.5%;
+	right: 1.5%;
 }

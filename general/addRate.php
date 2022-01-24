@@ -17,7 +17,8 @@
 
 	$result = $conn->query("UPDATE Projects SET rate = ".floatval($newRate).", Nrates = ".intval($projects[$id]["Nrates"] + 1)." WHERE id = ".intval($id));
 
+	$conn -> close();
 
-	header("Location: https://realwebsite.simonesaya.repl.co/projects");
+	header("Location: /projects");
 	die();
 ?>

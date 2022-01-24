@@ -1,16 +1,17 @@
-<?php include '/home/runner/realWebsite/general/datas.php'; ?>
+<?php session_start(); include '/home/runner/realWebsite/general/datas.php';?>
 
 <html>
 	<head>
 		<link rel="stylesheet" href="/general/style.css">
-		<link rel="icon" href="/general/favicon.png">
+		<link rel="icon" href="/images/favicon.png">
 		<title>Tuga's forum - Projects</title>
 	</head>
 
 	<body>
 		<center><hT>Projects</hT></center>
+		<?php include '/home/runner/realWebsite/general/autoLogin.php';?>
     	<br> <br>
-		
+
 		<table>
 			<?php
 				for ($i = 0; $i < count($projects); $i++) {
@@ -34,7 +35,7 @@
 							&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
 							<h>Rate this project: </h> 
 							<input type="number" id="rate'.strval($projects[$i]["id"]).'" min="0" max="10"> 
-							<button id="rateButton'.strval($projects[$i]["id"]).'" onclick="update('.strval($projects[$i]["id"]).')">Send vote</button>
+							<button id="rateButton'.strval($projects[$i]["id"]).'" onclick="update('.strval($projects[$i]["id"]).')"'.$disabled.'>Send vote</button>
 							&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
 						</td>
 

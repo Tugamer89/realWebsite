@@ -1,8 +1,10 @@
 <?php
-	$id = $_GET["id"];
-
+	session_start();
 	include '/home/runner/realWebsite/general/datas.php';
 
+	$id = $_GET["id"];
+
+	
 	if (isset($id) and $id >= 0 and $id < count($authors)) {
 		$nickname = $authors[$id]["nickname"];
 		$name = $authors[$id]["name"];
@@ -26,13 +28,15 @@
 <html>
 	<head>
 		<link rel="stylesheet" href="/general/style.css">
-		<link rel="icon" href="/general/favicon.png">
+		<link rel="icon" href="/images/favicon.png">
 		<title>Tuga's forum - <?php echo $nickname; ?></title>
 	</head>
 
 	<body>
 		<center>
-			<hT><?php echo $nickname; ?></hT> <br> <br> <br>
+			<hT><?php echo $nickname; ?></hT> 
+			<?php include '/home/runner/realWebsite/general/autoLogin.php';?>
+			<br> <br> <br>
 
 			<table>
 				<tr>
@@ -50,10 +54,14 @@
 			<br> <br> <br> <br> <br>
 
 
-			<position>Projects:</position>
+			<?php
+				if (count($projectA) > 0) {
+					echo "<position>Projects:</position>";
+				}
+			?>
 
 			<table>
-				<?php
+			<?php
 				for ($i = 0; $i < count($projectA); $i++) {
 					echo '
 					<tr>

@@ -1,14 +1,15 @@
-<!DOCTYPE html>
+<?php session_start(); include '/home/runner/realWebsite/general/datas.php';?>
 
 <html>
 	<head>
 		<link rel="stylesheet" href="/general/style.css">
-		<link rel="icon" href="/general/favicon.png">
+		<link rel="icon" href="/images/favicon.png">
 		<title>Tuga's forum</title>
 	</head>
 	<body>
 		<center>
-			<hT>Tuga's forum</hT>
+			<hT>Tuga's forum</hT> 
+			<?php include '/home/runner/realWebsite/general/autoLogin.php';?>
 			<br> <br>
 			
 			<p>Here are all projects of overworked childrens from my school</p>

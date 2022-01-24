@@ -1,15 +1,17 @@
-<?php include '/home/runner/realWebsite/general/datas.php'; ?>
+<?php session_start(); include '/home/runner/realWebsite/general/datas.php'; ?>
 
 <html>
 	<head>
 		<link rel="stylesheet" href="/general/style.css">
-		<link rel="icon" href="/general/favicon.png">
+		<link rel="icon" href="/images/favicon.png">
 		<title>Tuga's forum - Authors</title>
 	</head>
 
 	<body>
 		<center>
-			<hT>Authors</hT> <br> <br> <br>
+			<hT>Authors</hT>
+			<?php include '/home/runner/realWebsite/general/autoLogin.php';?>
+			<br> <br> <br>
 
 			<table>
 				<?php

