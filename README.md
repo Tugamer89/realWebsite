@@ -42,5 +42,5 @@ Feel free to contact me for more suggestions or if you find a bug!
   - Code optimized
   - Code cleaned
   - Secured 
-  - Added the cuntion to sort by athor or by project in the scoreboard
+  - Added the cuntion to sort by author or by project in the scoreboard
   
