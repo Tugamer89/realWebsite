@@ -9,6 +9,7 @@ Feel free to contact me for more suggestions or if you find a bug!
 
 ## **Known bugs:**
   - The copyright doesn't move as the page
+  - Default avatar not working
 
 <br>
 
