@@ -1,3 +1,5 @@
+<?php session_start(); include '/home/runner/realWebsite/general/datas.php';?>
+
 <html>
 	<head>
 		<link rel="stylesheet" href="/general/style.css">
@@ -7,6 +9,13 @@
 	<body>
 		<center>
 			<hT>Register an account</hT>
+			<?php 
+				include '/home/runner/realWebsite/general/autoLogin.php';
+
+				if ($disabled == "") {
+					echo '<meta http-equiv="refresh" content="0;url=/">';
+				}
+			?>
 			<br><br><br><br><br>
 
 			<table> <td> <form action="/general/register.php" method="post" enctype="multipart/form-data">

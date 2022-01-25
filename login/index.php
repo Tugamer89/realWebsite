@@ -1,3 +1,5 @@
+<?php session_start(); include '/home/runner/realWebsite/general/datas.php';?>
+
 <html>
 	<head>
 		<link rel="stylesheet" href="/general/style.css">
@@ -10,7 +12,7 @@
 			<?php 
 				include '/home/runner/realWebsite/general/autoLogin.php';
 
-				if ($disabled != "") {
+				if ($disabled == "") {
 					echo '<meta http-equiv="refresh" content="0;url=/">';
 				}
 			?>
