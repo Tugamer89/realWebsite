@@ -36,7 +36,7 @@
 				<input type="date" name="date" required max="<?php echo date("Y");?>-<?php echo date("m");?>-<?php echo date("d");?>">
 				<br> <br>
 				<label>Avatar: </label>
-				<input type="file" accept="image/*" id="imageUploaded" name="imageUploaded" required> <!-- Required temporarly -->
+				<input type="file" accept="image/*" id="imageUploaded" name="imageUploaded">
 				<br> <br> <br> <br>
 				<center> <input type="submit" name="submit" value="Register"> </center>
 			</form> </td> </table>

@@ -38,7 +38,7 @@
 
 			<br> <br>
 
-			<!-- <button type="button" onclick="addProject()">Add a project</button> -->
+			<button type="button" onclick="addProject()">Add a project</button>
 		</center>
 
 		<h id="rights">Copyright ©2022 All rights reserved | Made by: <a href="https://linktr.ee/tugamer" target="_blank">Tuga</a></h>

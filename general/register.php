@@ -22,7 +22,7 @@
 		}
 
 
-		if (isset($_FILES["imageUploaded"])) {
+		if (isset($_FILES["imageUploaded"]) and $_FILES["imageUploaded"]["name"] !== "") {
 			$avatarName = "/images/avatar/".basename($_FILES["imageUploaded"]["name"]);
 			
 			if (getimagesize($_FILES["imageUploaded"]["tmp_name"]) === false) {

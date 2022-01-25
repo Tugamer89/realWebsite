@@ -9,7 +9,6 @@ Feel free to contact me for more suggestions or if you find a bug!
 
 ## **Known bugs:**
   - The copyright doesn't move as the page
-  - Default avatar not working
 
 <br>
 
@@ -23,14 +22,20 @@ Feel free to contact me for more suggestions or if you find a bug!
 
 ## **Changelog:**
 
+### **Version 1.1.1**
+  - Fixed the default image bug
+  - Added the add project page
+  - Little bugs fixed
+  - You cannot upload some file extensions
+
 ### **Version 1.1.0**
  - Added register page
  - Added login page
  - Added login with cookies
  - Added login with session
  - Added the profile options
- - You can now rate projects only if you are logged in
- - You can now access to login page and options page only if you are logged in
+ - You can rate projects only if you are logged in
+ - You can access to login page and options page only if you are logged in
  - Secured
  - Code cleaned
  - Code optimized
