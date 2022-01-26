@@ -14,12 +14,16 @@ Feel free to contact me for more suggestions or if you find a bug!
 
 ## **Future implementations:**
 
-  - Crypting passwords
   - More beautifull graphics
   
 <br>
 
 ## **Changelog:**
+
+### **Version 1.1.2**
+  - Crypted password sql
+  - Crypted password cookie
+  - Little bugs fixed
 
 ### **Version 1.1.1**
   - Fixed the default image bug
