@@ -14,8 +14,6 @@ Feel free to contact me for more suggestions or if you find a bug!
 
 ## **Future implementations:**
 
-  - Page for creation of new projects
-  - Crypting passwords
   - More beautifull graphics
   
 <br>
