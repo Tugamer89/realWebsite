@@ -55,7 +55,7 @@
 			}
 		}
 
-		$result = $conn->query("INSERT INTO Authors (id, password, nickname, name, surname, date, image) VALUES ('".$id."', '".md5($password)."', '".$nickname."', '".$name."', '".$surname."', '".$date."', '".$avatarName."')");
+		$result = $conn->query("INSERT INTO Authors (id, password, nickname, name, surname, date, image) VALUES ('".$id."', '".$password."', '".$nickname."', '".$name."', '".$surname."', '".$date."', '".$avatarName."')");
 	}
 
 	$conn -> close();

@@ -14,12 +14,13 @@
 			if ($authors[$i]["nickname"] === $nicknameL) {
 				$idL = $i;
 				
-				if (md5($authors[$idL]["password"]) === md5($passwordL)) {
+				if (md5($authors[$idL]["password"]) === $passwordL) {
 					$_SESSION["id"] = $idL;
 					echo '<a href="/account" id="acc">'.$authors[$idL]["nickname"].'</a>';
 					$disabled = "";
 				} else {
-					//todo unset cookies without errors
+					echo "Password or username not valid";
+					//Delete cookies without any bug for echos
 				}
 
 				break;

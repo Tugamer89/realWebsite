@@ -14,16 +14,18 @@ Feel free to contact me for more suggestions or if you find a bug!
 
 ## **Future implementations:**
 
+  - Page for creation of new projects
+  - Crypting passwords
   - More beautifull graphics
   
 <br>
 
 ## **Changelog:**
 
-### **Version 1.1.2**
-  - Crypted password sql
-  - Crypted password cookie
-  - Little bugs fixed
+## **Version 1.1.2**
+  - Crypted passwords in the sql server
+  - Crypted passwords in login forms
+  - Little bug fixed
 
 ### **Version 1.1.1**
   - Fixed the default image bug
